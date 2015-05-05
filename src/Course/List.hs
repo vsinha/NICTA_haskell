@@ -4,7 +4,8 @@
 {-# LANGUAGE FlexibleInstances #-}
 
 -- + Complete the 10 exercises below by filling out the function bodies.
---   Replace the function bodies (error "todo") with an appropriate solution.
+--   Replace the function bodies (error "todo: ...") with an appropriate
+--   solution.
 -- + These exercises may be done in any order, however:
 --   Exercises are generally increasing in difficulty, though some people may find later exercise easier.
 -- + Bonus for using the provided functions or for using one exercise solution to help solve another.
@@ -118,7 +119,6 @@ length =
   foldLeft accumulate 0 
     where
       accumulate a _ = a + 1 -- drop the list element fold will be giving
-
 -- | Map the given function on each element of the list.
 --
 -- >>> map (+10) (1 :. 2 :. 3 :. Nil)
@@ -214,7 +214,6 @@ flattenAgain ::
   List (List a)
   -> List a
 flattenAgain = flatMap (\x -> x) -- simply map the identity function
-
 
 -- | Convert a list of optional values to an optional list of values.
 --

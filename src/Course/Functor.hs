@@ -73,7 +73,6 @@ instance Functor Optional where
   (<$>) _ Empty    = Empty
   (<$>) f (Full a) = Full (f a)
 
-
 -- | Maps a function on the reader ((->) t) functor.
 --
 -- >>> ((+1) <$> (*2)) 8

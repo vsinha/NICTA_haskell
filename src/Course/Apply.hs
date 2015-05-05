@@ -52,7 +52,6 @@ instance Apply List where
   (<*>) (f :. fs) as = (f <$> as) ++ (fs <*> as)
   -- f <*> a = flatMap (`map` a) f
   -- HC: (<*>) fs xs = foldRight (\f acc -> map f xs ++ acc) Nil fs
-    
 
 -- | Implement @Apply@ instance for @Optional@.
 --
@@ -72,7 +71,6 @@ instance Apply Optional where
   (<*>) Empty _           = Empty
   (<*>) _ Empty           = Empty
   (<*>) (Full f) (Full x) = Full (f x)
---f <*> a = bindOptional (`mapOptional` a) f
 
 -- | Implement @Apply@ instance for reader.
 --
